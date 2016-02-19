@@ -1,0 +1,42 @@
+body {text-align: center;font-family: ariel black; position: relative}
+body ,html {height: 100%;width:100%;padding: 0;margin: 0;}
+.slide-one {background-image: url('/bkgd/Darkside-01.jpg');}
+.slide-two {background-image: url('/bkgd/vintage_paper_background (1).jpg');}
+.slide-three {background-image: url('/bkgd/ground_02.jpg');}
+.iconLink {margin: 10px;}
+#title {font-size:3em;margin-top: 80px;}
+@media (min-width:450px){#title{font-size: 4em;}}
+
+/*NAV AND SIDE NAV*/
+nav {background-color: #3e474f;box-shadow: 0 .5em 1em #111;top: 0;left: 0;width: 100%;z-index: 900;position:fixed;top:0px;right:0px; left:0px; z-index:999;}
+nav a {color: #788188;cursor: pointer;
+display: inline-block;font-size: 1.5em;font-weight: bold;padding: 15px 1em;}
+nav a:hover {background: #2e353b;}
+.sidenav { height: 100%; width: 0; position: fixed; z-index: 1;
+  top: 0; left: 0; background-color: #111; overflow-x: hidden;
+  transition: 0.5s; padding-top: 60px;}
+.sidenav a {padding: 8px 8px 8px 32px;text-decoration: none;font-size: 25px;
+  color: #818181;display: block;transition: 0.3s}
+.sidenav a:hover, .offcanvas a:focus{color: #f1f1f1;}
+.closebtn { position: absolute; top: 0;right: 25px;font-size: 36px !important;
+  margin-left: 50px;}
+.sideNavContainer {
+   position: fixed;top: 0px;right: 0px;left:0px;
+    z-index: 9999;}
+@media (min-width:750px) {#small{display: none;}}
+@media (max-width:450px) {#mainNav{ display: none;}
+#mySidenav { display: initial;}}
+@media (max-width:1050px) {#big{display: none;}}
+@media screen and (max-height: 450px) {.sidenav {padding-top: 15px;}
+.sidenav a {font-size: 18px;}}
+
+/*GALLERY*/
+.modal-dialog, .modal-header, .modal-body, .modal-footer {background-color: #fff;color:black;}
+.modal-dialog{border-radius: 4px;}
+.modal-title {color:black}
+/*.carousel-control.right {background-image: none;}*/
+.carousel-inner.item {margin: 0 auto;}
+.modal .btn {background-color: transparent;border: none;color:black}
+#gallText, #conText {padding-left: 10px;padding-right: 10px;}
+#conText {background-color: rgba(255,255,255,0.6);color: black;font-size: 1.1em;font-weight: bold;margin-top: 40px;}
+#gallText {background-color: rgba(0,0,0,0.6);color: white}

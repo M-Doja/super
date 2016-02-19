@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<title>LisanaPhoto</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap_theme.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/site.css">
+	<meta charset="utf-8">
+</head>
+<body class="container slide-one" style='max-height:100%' >
+	<div class="container wrap ">
+		<div id="mySidenav" class="sidenav sideNavContainer">
+
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+			<a href="/" onclick="closeNav()">Home</a>
+			<a href="/gallery.html" onclick="closeNav()">Gallery</a>
+			<a href="/contact.html" onclick="closeNav()">Contact</a>
+		</div>
+		<!-- Use any element to open/show the overlay navigation menu -->
+		<div style="font-size:30px;cursor:pointer;background-color: #120103;max-width:100%;position: fixed;top: 0px;right: 0px;left:0px;z-index: 999;" onclick="openNav()">☰ MENU</div>
+
+		<nav id="mainNav">
+			<a href="/">Home</a>
+			<a href="/gallery.html">Gallery</a>
+			<a href="/contact.html">Contact</a>
+		</nav>
+
+				<h1 id="title" style="margin-top:80px;">Welcome to<br><b>LisanaPhoto</b></h1>
+				<div id="text1"class="row" style="margin-top:40px;">
+					<!-- SOCIAL LINKS AND PROFILE PIC -->
+					<div class="col-md-6">
+						<img class="img-responsive"src="http://lorempixel.com/500/300" alt="" /><br>
+						<img class='iconLink'src="/icon/Tumblr.png" width='40' alt="Tumblr link" />
+						<img class='iconLink'src="/icon/insta.png" width='40' alt="Instagrm link" />
+						<img class='iconLink'src="/icon/facebook.png" width='40' alt="Facebook link" />
+					</div>
+
+					<!-- ABOUT SECTION -->
+					<div class="col-md-6" style="padding-right:15px;margin-bottom:40px;">
+						<h3>I'm the best photgrapher your money can buy! Period</h3>
+						<p>
+							HIRE ME NOW!
+						</p>
+						<p>
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+						</p>
+					</div>
+				</div>
+			</div>
+
+	    <script type="text/javascript">
+	    function openNav() {
+	        document.getElementById("mySidenav").style.width = "250px";
+	    }
+	    function closeNav() {
+	        document.getElementById("mySidenav").style.width = "0";
+	    }
+	    </script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="/javascript/app.js"></script>
+</body>
+</html>

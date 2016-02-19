@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<title>LisanaPhoto</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap_theme.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/site.css">
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script>//
+	$(document).ready(function(){
+			$("#send_email").click(function(){
+					var from;
+					var to = "photolisana@gmail.com";
+					var subject = document.getElementById("subject").value;
+					var text = document.getElementById("text").value;
+					console.log(subject);
+					console.log(text);
+					console.log(to);
+					if (text == "" && subject == "") {
+						console.log('No data entered. Send cancelled');
+						$("#message").html("<p id='missing'>There is missing information!</p>");
+						return;
+					}
+					$("#message").html("<p style='color:white;font-family:ariel black;>Sending Message...Please wait</p>");
+					$.get("/send",{to:to,subject:subject,text:text},function(data){
+					if(data=="sent")
+					{
+						$("#message").empty().html("<br><br><br><h4 style='color:white;font-family:ariel black;margin-top:-60px;'>Email has been sent to LisanaPhoto@gmail.com .<br> Thanks for the message! I'll get back to you as soon as I can.</h4>");
+					}
+				});
+				document.getElementById("subject").value = '';
+				document.getElementById("text").value = '';
+			});
+		});
+	</script>
+	<style>
+	#text {border-radius:6px;width: 200px;}
+	#subject {border-radius:4px;}
+	#missing {color:white;font-family:ariel black;}
+	.button {background: transparent;border: none;color:white;font-size: 1.6em;}
+	.button:hover {background-color: rgba(255,255,255,0.7);border-radius: 6px;color: black;font-weight: bold;}
+		@media (min-width:500px) {#text {width:300px;height: 150px;}}
+	</style>
+</head>
+<body class="slide-three">
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="/" onclick="closeNav()">Home</a>
+    <a href="/gallery.html" onclick="closeNav()">Gallery</a>
+    <a href="/contact.html" onclick="closeNav()">Contact</a>
+  </div>
+  <!-- Use any element to open/show the overlay navigation menu -->
+  <div style="font-size:30px;cursor:pointer;background-color: #120103;max-width:100%;" onclick="openNav()">☰ MENU</div>
+  <nav id="mainNav">
+    <a href="/">Home</a>
+    <a href="/gallery.html">Gallery</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
+
+    <section id="contact">
+    <!-- <h1>I'd Love to hear from you!</h1> -->
+    <p id="conText">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+
+    <div class="container" style="text-align:center;margin:0 auto;">
+      <div class="row">
+        <div class="col-md-12"style="text-align:center">
+
+          <div style="background-color:rgba(0,0,0,0.6);max-width:400px;padding:20px;text-align:center;margin:1% auto;font-family:serif;border-radius:10px;">
+            <h1 style="color:white;font-family:serif;">Send Me A Message!</h1>
+
+        		<input id="subject" type="text" placeholder="Subject" /><br><br>
+
+        		<textarea id="text"  placeholder="Please include: (name, number, and contact email)."></textarea><br><br>
+
+        		<button class="button"id="send_email">Send Message</button><hr>
+
+            <span id="message" style="color:white;font-family:ariel black;"></span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+</section>
+
+
+    <script type="text/javascript">
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
+
+
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="/javascript/app.js"></script>
+</body>
+</html>
