@@ -24,11 +24,11 @@
 						$("#message").html("<p id='missing'>There is missing information!</p>");
 						return;
 					}
-					$("#message").html("<p style='color:white;font-family:ariel black;>Sending Message...Please wait</p>");
+					$("#message").html("<p style='color:white;font-family:arial black;>Sending Message...Please wait</p>");
 					$.get("/send",{to:to,subject:subject,text:text},function(data){
 					if(data=="sent")
 					{
-						$("#message").empty().html("<br><br><br><h4 style='color:white;font-family:ariel black;margin-top:-60px;'>Email has been sent to LisanaPhoto@gmail.com .<br> Thanks for the message! I'll get back to you as soon as I can.</h4>");
+						$("#message").empty().html("<br><br><br><h4 style='color:white;font-family:arial black;margin-top:-60px;'>Email has been sent to LisanaPhoto@gmail.com .<br> Thanks for the message! I'll get back to you as soon as I can.</h4>");
 					}
 				});
 				document.getElementById("subject").value = '';
@@ -39,7 +39,7 @@
 	<style>
 	#text {border-radius:6px;width: 200px;}
 	#subject {border-radius:4px;}
-	#missing {color:white;font-family:ariel black;}
+	#missing {color:white;font-family:arial black;}
 	.button {background: transparent;border: none;color:white;font-size: 1.6em;}
 	.button:hover {background-color: rgba(255,255,255,0.7);border-radius: 6px;color: black;font-weight: bold;}
 		@media (min-width:500px) {#text {width:300px;height: 150px;}}
@@ -70,16 +70,16 @@
       <div class="row">
         <div class="col-md-12"style="text-align:center">
 
-          <div style="background-color:rgba(0,0,0,0.6);max-width:400px;padding:20px;text-align:center;margin:1% auto;font-family:serif;border-radius:10px;">
-            <h1 style="color:white;font-family:serif;">Send Me A Message!</h1>
+          <div style="background-color:rgba(0,0,0,0.6);max-width:400px;padding:20px;text-align:center;margin:1% auto;font-family:Arial black;border-radius:10px;">
+            <h1 style="color:white;font-family:arial black;">Send Me A Message!</h1>
 
         		<input id="subject" type="text" placeholder="Subject" /><br><br>
 
-        		<textarea id="text"  placeholder="Please include: (name, number, and contact email)."></textarea><br><br>
+        		<textarea id="text"  placeholder="Along with your inquiry Please include your: (name, phone number, and contact email)."></textarea><br><br>
 
         		<button class="button"id="send_email">Send Message</button><hr>
 
-            <span id="message" style="color:white;font-family:ariel black;"></span>
+            <span id="message"></span>
           </div>
 
         </div>

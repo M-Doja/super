@@ -1,10 +1,22 @@
-body {text-align: center;font-family: ariel black; position: relative}
+body {text-align: center;font-family: Arial black; position: relative}
 body ,html {height: 100%;width:100%;padding: 0;margin: 0;}
 .slide-one {background-image: url('/bkgd/Darkside-01.jpg');}
 .slide-two {background-image: url('/bkgd/vintage_paper_background (1).jpg');}
 .slide-three {background-image: url('/bkgd/ground_02.jpg');}
 .iconLink {margin: 10px;}
-#title {font-size:3em;margin-top: 80px;}
+#tle {font-size:1.6em;margin-top: 80px;}
+.modal-title{font-family: Arial black;}
+.close{color:black}
+.modal-footer{display: none;}
+::-webkit-input-placeholder {
+   color:rgba(255,0,0,0.5);font-family: arial black;}
+:-moz-placeholder { /* Firefox 18- */
+   color:rgba(255,0,0,0.5);font-family: arial black;}
+::-moz-placeholder {  /* Firefox 19+ */
+   color:rgba(255,0,0,0.5);font-family: arial black;}
+:-ms-input-placeholder {
+   color:rgba(255,0,0,0.5);font-family: arial black;}
+   #sent{display: none;}
 @media (min-width:450px){#title{font-size: 4em;}}
 
 /*NAV AND SIDE NAV*/
