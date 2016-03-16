@@ -5,6 +5,9 @@ body ,html {height: 100%;width:100%;padding: 0;margin: 0;}
 .slide-three {background-image: url('/bkgd/ground_02.jpg');}
 .iconLink {margin: 10px;}
 #tle {font-size:1.6em;margin-top: 80px;}
+@media(min-width:758px) {
+  #tle{font-size:2.6em;}
+}
 .modal-title{font-family: Arial black;}
 .close{color:black}
 .modal-footer{display: none;}
